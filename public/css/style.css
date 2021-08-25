@@ -61,3 +61,31 @@ body{
 .post-cardText {
   color: var(--darkBrown);
 }
+
+.loginSignup-Header p{
+  color: var(--mintGreen);
+  font-size: 24px;
+}
+
+.inputLabel {
+  font-size: 16px;
+  color: var(--darkBrown);
+  font-weight: bold;
+}
+
+.loginSignup-Input {
+  height: 32px;
+  width: 95%;
+}
+
+.loginSignup-Btn {
+  margin-top: 5px;
+  height: 32px;
+  width: 95%;
+  color: var(--lightGray);
+}
+
+.removeHyperlink {
+  text-decoration: none;
+  color: var(--darkBrown);
+}

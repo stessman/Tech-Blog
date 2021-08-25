@@ -24,6 +24,17 @@ router.get('/loginpage', async (req, res) => {
   }
 });
 
+router.get('/signuppage', async (req, res) => {
+  try {
+    res.render('signuppage', {
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/addpet', async (req, res) => {
   try {
     res.render('createPetPage', {
