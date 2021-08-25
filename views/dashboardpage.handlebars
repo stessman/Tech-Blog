@@ -1,0 +1,33 @@
+<div class="wrapper">
+<div>
+<div class="card userPost-Card createNewPostCard">
+    <div  class="card-header loginSignup-Header navBar">
+        <p>Create New Post</p>
+    </div>
+  {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
+  <div class="card-body post-cardBody">
+      <label class="inputLabel" for="title_field">
+      Title:
+    </label>
+    <br />
+    <input class="loginSignup-Input" id="title_field" name="title field">
+      {{title}}
+    </input>
+    <br />
+    <label class="inputLabel" for="content_field">
+      Content:
+    </label>
+    <br />
+    <input class="loginSignup-Input" id="content_field" name="content field">
+      {{content}}
+    </input>
+    <br />
+    <a href="#" class="btn btn-secondary loginSignup-Btn">Create</a>
+    <br />
+  </div>
+</div>
+</div>
+<div class="newPost-Con">
+<a href="#" class="btn btn-primary newPost-Btn">+ New Post</a>
+</div>
+</div>

@@ -62,6 +62,10 @@ body{
   color: var(--darkBrown);
 }
 
+.loginSignup-Header{
+  min-height: 36px;
+}
+
 .loginSignup-Header p{
   color: var(--mintGreen);
   font-size: 24px;
@@ -88,4 +92,24 @@ body{
 .removeHyperlink {
   text-decoration: none;
   color: var(--darkBrown);
+}
+
+.newPost-Con {
+  margin-top: 20px;
+  display:flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.wrapper{
+  display: block;
+  width: 100%;
+}
+
+.newPost-Btn {
+background-color: var(--darkBrown);
+}
+
+.createNewPostCard{
+display: none;
 }

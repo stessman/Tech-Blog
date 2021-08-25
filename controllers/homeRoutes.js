@@ -35,9 +35,9 @@ router.get('/signuppage', async (req, res) => {
   }
 });
 
-router.get('/addpet', async (req, res) => {
+router.get('/dashboardpage', async (req, res) => {
   try {
-    res.render('createPetPage', {
+    res.render('dashboardpage', {
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
