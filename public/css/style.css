@@ -28,13 +28,9 @@
   justify-content: flex-end;
 }
 
-p {
-  color: var(--mintGreen);
-}
-
 .userPost-Card {
+  margin: 0 auto;
   width: 85%;
-  justify-content: center;
   margin-top: 15px;
   border-style: solid;
   border-color: var(--darkBrown);
@@ -52,4 +48,16 @@ body{
 .userPost-Header {
   height: 20%;
   display: flex;
+}
+
+.userPost-Header p {
+  color: var(--lightGray);
+}
+
+.post-cardBody{
+  background-color: var(--mintGreen);
+}
+
+.post-cardText {
+  color: var(--darkBrown);
 }
