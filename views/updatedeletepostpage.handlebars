@@ -1,0 +1,31 @@
+<div class="postContainer">
+<div>
+<div class="card userPost-Card">
+    <div  class="card-header loginSignup-Header navBar">
+        <p>Edit Post</p>
+    </div>
+  {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
+  <form class="form signup-form">
+  <div class="card-body post-cardBody">
+      <label class="inputLabel" for="title_field">
+      Title:
+    </label>
+    <br />
+    <input class="loginSignup-Input" id="title_field" name="title field" value="{{post_title}}">
+    </input>
+    <br />
+          <label class="inputLabel" for="content_field">
+      Content:
+    </label>
+    <br />
+    <input class="loginSignup-Input" id="content_field" name="content field" value="{{post_contents}}">
+    </input>
+    <button class="btn btn-secondary loginSignup-Btn" id="updatePost-Btn">Update Post</a>
+    <button class="btn btn-secondary loginSignup-Btn" id="deletePost-Btn" data-id="{{id}}">Delete</a>
+  </div>
+</form>
+</div>
+</div>
+</div>
+
+<script src="/js/post.js"></script>

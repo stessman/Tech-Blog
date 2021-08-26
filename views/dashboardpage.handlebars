@@ -1,5 +1,10 @@
 <div class="wrapper">
-<div>
+<div class="dashboardPosts">
+  {{#each posts as |post|}}
+  <a href="/updatedelete/{{post.id}}" class="btn btn-secondary loginSignup-Btn dash-post">
+  <p>{{post.post_title}} - {{post.date_created}}</p>
+</a>
+{{/each}}
 <div class="card userPost-Card createNewPostCard">
     <div  class="card-header loginSignup-Header navBar">
         <p>Create New Post</p>

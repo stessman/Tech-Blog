@@ -123,3 +123,13 @@ display: none;
   text-decoration: none;
   color: var(--lightGray);
 }
+
+.dashboardPosts {
+  margin: 0 auto;
+  width: 85%;
+  margin-top: 15px;
+}
+
+.dash-post {
+  display: flex;
+}

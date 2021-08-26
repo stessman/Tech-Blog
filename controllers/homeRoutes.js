@@ -52,12 +52,13 @@ router.get('/dashboardpage', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
     where:{
-      user_id:req.session.user_id,
+      user_id: req.session.user_id,
     },
     });
 
     const posts = postData.map((post) => post.get({plain:true}));
     res.render('dashboardpage', {
+      posts,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -91,6 +92,26 @@ router.get('/post/:id', withAuth, async (req,res)=> {
     const comments = commentData.map((comment) => comment.get({plain:true}));
     res.render('viewpostpage', {
       ...post,comments,
+      loggedIn: req.session.loggedIn
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/updatedelete/:id', withAuth, async (req,res)=> {
+  try{
+    const postData = await Post.findByPk(req.params.id, {
+      include:[
+        {
+          model: User,
+          attributes:['user_name'],
+        },
+      ],
+    });
+    const post = postData.get({plain:true});
+    res.render('updatedeletepostpage', {
+      ...post,
       loggedIn: req.session.loggedIn
     });
   } catch (err) {
