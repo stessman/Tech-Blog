@@ -1,0 +1,14 @@
+[
+    {
+        "comment_contents": "This is comment contents",
+        "date_created": "2021-04-23",
+        "user_id": 1,
+        "post_id": 1
+      },
+      {
+        "comment_contents": "This is SECOND COMMENT CONTENTS",
+        "date_created": "2021-04-23",
+        "user_id": 1,
+        "post_id": 2
+      }
+]

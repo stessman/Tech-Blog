@@ -4,5 +4,11 @@
         "post_contents": "This is test post contents",
         "date_created": "2021-04-23",
         "user_id": 1
+      },
+      {
+        "post_title": "This is the the SECOND POST",
+        "post_contents": "This is SECOND CONTENTS",
+        "date_created": "2021-04-23",
+        "user_id": 1
       }
 ]

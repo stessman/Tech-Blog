@@ -1,0 +1,47 @@
+<div class="postContainer">
+<div class="postContainer">
+<div class="card userPost-Card">
+    <div  class="card-header userPost-Header navBar">
+        <a class="postTitle-Home mainPost" href="/post/{{id}}">{{post_title}}</a>
+        <p class="userPosted">Posted by {{user.user_name}} on {{date_created}}</p>
+    </div>
+  {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
+  <div class="card-body post-cardBody">
+    <p class="post-cardText">{{post_contents}}</p>
+  </div>
+</div>
+</div>
+<div class="commentsContainer">
+{{#each comments as |comment|}}
+<div class="card userPost-Card">
+    <div  class="card-header userPost-Header navBar">
+    </div>
+  <div class="card-body post-cardBody">
+    <p class="post-cardText">{{comment.comment_contents}}</p>
+    <p>{{comment.user.user_name}}, {{comment.date_created}}</p>
+  </div>
+</div>
+{{/each}}
+</div>
+<div>
+<div class="card userPost-Card">
+    <div  class="card-header loginSignup-Header navBar">
+    </div>
+    <form class="form comment-form">
+  <div class="card-body post-cardBody">
+      <label class="inputLabel" for="comment_field">
+      Comment:
+    </label>
+    <br />
+    <input class="loginSignup-Input" id="comment_field" name="comment field">
+      {{comment_contents}}
+    </input>
+    <br />
+    <button type="submit" class="btn btn-secondary loginSignup-Btn">Submit</button>
+  </div>
+  </form>
+</div>
+</div>
+</div>
+
+<script src="/js/comment.js"></script>
