@@ -42,4 +42,26 @@ router.put('/update/:id', withAuth, async (req, res) => {
   }
 });
 
+//Create Post
+router.post('/create', withAuth, async (req, res) => {
+  try {
+    const dbUserData = await Post.create({
+      post_title: req.body.post_title,
+      post_contents: req.body.post_contents,
+      date_created: req.body.date_created,
+      user_id: req.session.user_id,
+    });
+
+    req.session.save(() => {
+      req.session.user_id = dbUserData.user_id;
+      req.session.loggedIn = true;
+
+      res.status(200).json(dbUserData);
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

@@ -48,6 +48,17 @@ router.get('/signuppage', async (req, res) => {
   }
 });
 
+router.get('/addpost', async (req, res) => {
+  try {
+    res.render('addpostpage', {
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.get('/dashboardpage', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({

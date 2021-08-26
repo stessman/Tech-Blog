@@ -1,15 +1,9 @@
 <div class="wrapper">
-<div class="dashboardPosts">
-  {{#each posts as |post|}}
-  <a href="/updatedelete/{{post.id}}" class="btn btn-secondary loginSignup-Btn dash-post">
-  <p>{{post.post_title}} - {{post.date_created}}</p>
-</a>
-{{/each}}
-<div class="card userPost-Card createNewPostCard">
+    <div class="card userPost-Card">
     <div  class="card-header loginSignup-Header navBar">
         <p>Create New Post</p>
     </div>
-  {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
+  <form class="form createpost-form">
   <div class="card-body post-cardBody">
       <label class="inputLabel" for="title_field">
       Title:
@@ -30,9 +24,8 @@
     <button type="submit" class="btn btn-secondary loginSignup-Btn">Create</a>
     <br />
   </div>
+  </form>
 </div>
 </div>
-<div class="newPost-Con">
-<a href="/addpost" class="btn btn-primary newPost-Btn">+ New Post</a>
-</div>
-</div>
+
+<script src="/js/createpost.js"></script>
