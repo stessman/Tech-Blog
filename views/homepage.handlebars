@@ -1,35 +1,17 @@
-<div>
 <div class="postContainer">
+<div class="postContainer">
+  {{#each posts as |post|}}
 <div class="card userPost-Card">
     <div  class="card-header userPost-Header navBar">
-        <p>Username</p>
-        <p class="userPosted">Date posted</p>
+        <a class="postTitle-Home" href="/post/{{post.id}}">{{post.post_title}}</a>
+        <p class="userPosted">Posted by {{post.user.user_name}} on {{post.date_created}}</p>
     </div>
   {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
   <div class="card-body post-cardBody">
-    <p class="post-cardText">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. </p>
+    <p class="post-cardText">{{post.post_contents}}</p>
   </div>
 </div>
-<div class="card userPost-Card">
-    <div  class="card-header userPost-Header navBar">
-        <p>Username</p>
-        <p class="userPosted">Date posted</p>
-    </div>
-  {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
-  <div class="card-body post-cardBody">
-    <p class="post-cardText">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. </p>
-  </div>
-</div>
-<div class="card userPost-Card">
-    <div  class="card-header userPost-Header navBar">
-        <p>Username</p>
-        <p class="userPosted">Date posted</p>
-    </div>
-  {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
-  <div class="card-body post-cardBody">
-    <p class="post-cardText">With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. With supporting text below as a natural lead-in to additional content. </p>
-  </div>
-</div>
+{{/each}}
 </div>
 <div>
 <div class="card userPost-Card">

@@ -1,5 +1,6 @@
 [
     {
+        "post_title": "This is the title",
         "post_contents": "This is test post contents",
         "date_created": "2021-04-23",
         "user_id": 1

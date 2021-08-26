@@ -3,6 +3,7 @@
         <p>Sign Up</p>
     </div>
   {{!-- <h5 class="card-header userPost-Header navBar">Featured</h5> --}}
+  <form class="form signup-form">
   <div class="card-body post-cardBody">
       <label class="inputLabel" for="user_name_field">
       Username:
@@ -20,9 +21,12 @@
       {{password}}
     </input>
     <br />
-    <a href="#" class="btn btn-secondary loginSignup-Btn">Sign Up</a>
+    <button type="submit" class="btn btn-secondary loginSignup-Btn">Sign Up</a>
+    </form>
     <br />
     <a class="removeHyperlink" href="/loginpage" >Login instead</a>
   </div>
 </div>
 </div>
+
+<script src="./js/signup.js"></script>

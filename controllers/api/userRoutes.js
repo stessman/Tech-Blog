@@ -22,6 +22,7 @@ router.post('/signup', async (req, res) => {
 
 //Login
 router.post('/', async (req, res) => {
+    console.log(req.body.user_name);
   try {
     const dbUserData = await User.findOne({
       where: {
