@@ -41,4 +41,4 @@ Once this is done you should be good to go.
 ## Usage Information
 Firstly verify that all instillation instructions are completed. Open the terminal at the top level of the project and run 'npm start' to start the server. The user is able to view posts on the homepage without needing to be logged in. If they want to comment on posts or create their own posts then they must login or sign up for an account. 
 
-Link to app usage video: [Tech Blog](https://drive.google.com/file/d/1JawjhhPOr8_rR7GIS1PjU9WSGm40IYHk/view)
+Link to app usage video: [Tech Blog](https://calm-crag-87567.herokuapp.com/)
